@@ -1,0 +1,27 @@
+== Running tests
+
+First, you should have two WMIDs associated with Personal attestate (WMT require!).
+Then, create ~/.wm/config.yml file:
+
+ca_cert: file_or_path_to_directory # optional, all needed certs in lib
+first:
+  wmtype: classic
+  wmid: '123456789012' # quotes for interpretate as string
+  key: 'gQABAIR6... YOUR BASE64-KEY (see wmsigner readme) ...2cC8FZTyKyjBM='
+  password: _your_password_
+  wmz: Z123456789012
+second:
+  wmtype: light
+  wmid: '012345678901'
+  password: _your_another_password_
+  cert: webmoney.pem
+  key: webmoney.key
+  wmz: Z012345678901
+  rid: 57f9ff86-1afb-431f-aff4-9dfb00b70773     # site RID from login.wmtransfer.com
+  iname: "Alexander" # should be real first name for this WMID
+  fname: "Ivanov" # should be real last name for this WMID
+
+HOWTO convert Light-keys:
+Russian: https://wiki.webmoney.ru/wiki/show/Konvertatsiya_klyuchey_WM_Keeper_Light_v_PEM_format
+
+Then type (RSpec required): rake spec

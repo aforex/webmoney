@@ -1,0 +1,146 @@
+ChangeLog
+
+Thu Nov 22 13:07:47 2012 +0400
+----------------------------
+  V 0.0.15.pre
+  * Changes in x509 cert/key configuration (backward compatible)
+  * Pure ruby implementation of signing algorithm (100 times faster),
+    thanks to Sergey Gridasov <grindars@gmail.com>
+
+Thu Oct 25 13:47:06 2012 +0400
+----------------------------
+  V 0.0.14
+  * Added X9 interface (:balance)
+  * Added x509 version X11 interface (:get_passport)
+  * Some bugs fixed
+  * Fix compile Warning
+
+Wed Apr 11 2012 14:16:00 +0400
+----------------------------
+  V 0.0.13
+  * Added check_owner X19
+  * Compatibility with ruby 1.9.3(-p0,-p125) ( String#encode instead Iconv)
+  * Merged certs into ca_bundle.crt (workaround new CApath hashes in openssl 1.0.0)
+
+Tue Apr 26 2011 16:31:00 +0400
+----------------------------
+  V 0.0.12
+  * Fix compile on gcc-4.5 under mingw (unnecessary macros removed)
+
+Fri Feb 18 2011 18:30:00 +0300
+----------------------------
+  V 0.0.11
+  * Add i_trust and trust_me interfaces
+  * Trim reqn() to 14 digits. Warning: request to WebMoney Transfer support team for reset REQN counter, might be necessary!
+  * Fix error in create_invoice, create_transaction
+
+Wed Oct 06 2010 11:14:00 +0300
+----------------------------
+  V 0.0.10
+  * Add login interface
+  * Fix bug in Passport, when datereg == 0
+  * Earlier added:
+  - create_invoice     - x1
+  - outgoing_invoices  - x4
+
+Mon Sep 20 2010 14:31:00 +0300
+----------------------------
+  V 0.0.9
+  * Add light-keys support
+  * Fix Purse bug
+  * Add Passport#wmids method
+
+Mon Aug 24 2010 12:00:00 +0300
+----------------------------
+  V 0.0.8
+  * Compatible with ruby 1.9.2
+  * Added Gemfile
+
+Mon Jun 07 2010 19:01:30 +0400
+----------------------------
+  V 0.0.7
+  * Update WebMoneyCA.crt (since 06/07/2010)
+
+Fri May 28 2010 11:24:40 +0400
+----------------------------
+  V 0.0.6
+  * Fix to compatibility with ruby 1.8.6 (Symbol#to_proc related)
+
+Fri Feb 12 2010 11:22:35 + 0400
+----------------------------
+  V 0.0.5
+  * Using Nokogiri instead Hpricot+Builder, incompatible with libxml2 < 2.7.0
+  * Using jeweler+rake-compiler
+  * Complete parse attestat fields (X11)
+  * Add X2-Create transaction
+
+Sat Oct 03 2009 16:18:00 + 0400
+----------------------------
+  V 0.0.4.8
+  * Refactor class Passport
+
+Wed Sep 30 2009 16:09:00 +0400
+----------------------------
+  V 0.0.4.7
+  * Class Webmoney refactor to module
+  * Add find_wm (X8) interface
+  * Add logger call when send message via simple queue
+
+Wed Aug 12 2009 20:31:00 +0400
+----------------------------
+  V 0.0.4.6
+  * Feature: path to certs directory
+  * New CA certificates in bundle
+
+Thu Jun 11 2009 13:05:00 +0400
+----------------------------
+  V 0.0.4.5
+  * Fix unexistent WMID passport request error
+  * Fix zero microsecounds error in reqn()
+
+Sun Mar 15 2009 14:55:18 +0400
+----------------------------
+  V 0.0.4.4
+  * Fix bug in send_message (reqn related)
+  * Refactor for more extendable
+
+Thu Jan 22 2009 14:00:00 +0400
+----------------------------
+  V 0.0.4.3
+  * Move Webmoney#sign to public methods
+  * Add gemspec
+  * Add more rdoc
+
+Tue Oct 14 2008 18:46:50 +0400
+----------------------------
+  V 0.0.4.2
+  * Remove ActiveSuport stupid dependency
+  * Remove Time.from_ms meaningless method
+  * Rename config file to ~/.wm/config.yml
+
+Tue Aug 19 11:31:53 2008 +0400
+----------------------------
+  V 0.0.4.1
+  * Fix error in parsing ms-data without ending zeros
+
+Wed Feb 27 19:09:00 MSK 2008
+----------------------------
+  V 0.0.4
+  * Redesign interfaces, BIG changes
+  * Add Messenger class for processing messages queue in new thread
+  * Add ResponseError on incorrect http response (404, 501, etc)
+
+Wed Oct 24 17:57:00 MSK 2007
+----------------------------
+  V 0.0.3 
+  * Add send_message interface
+  * Add specific Exceptions
+  * Add parse_retval for response
+  
+Tue Aug 7 14:34:00 MSK 2007
+----------------------------
+  V 0.0.2
+  * Bug fixes...
+
+  V 0.0.1
+  * Initial release
