@@ -1,3 +1,6 @@
+SEE THIS ---> https://github.com/eagleas/wmsigner/blob/master/README.rus
+
+
 # About Webmoney library
 
 This library should help to make requests to WebMoney Transfer http://www.wmtransfer.com
